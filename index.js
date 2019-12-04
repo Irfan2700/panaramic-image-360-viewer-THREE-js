@@ -1,6 +1,9 @@
+const THREE = require('three')
+const OrbitControls = require('three-orbitcontrols')
+
 var scene, camera, renderer, controls, geometry, edges, light1, light2, texture, line, model;
 
-texture = new THREE.TextureLoader().load('https://i.postimg.cc/P5TQTN1s/daniel-probst-ok2-OISDAu3-I-unsplash.jpg', function(){
+texture = new THREE.TextureLoader().load('https://i.postimg.cc/0jChBHLK/test-image2.jpg', function(){
 
     init();
     animate();
@@ -24,9 +27,9 @@ renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 scene.background = new THREE.Color(0xffffff);
 
 // mouse controls
-controls = new THREE.OrbitControls(camera, renderer.domElement);
+controls = new OrbitControls(camera, renderer.domElement);
 // camera.position.set(0,0,0);
-camera.position.set(0,20, 100);
+camera.position.set(0,0,0);
 // controls.autoRotate = true;
 controls.enableKeys = true;
 controls.enableRotate = true;
