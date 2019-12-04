@@ -3,7 +3,9 @@ const OrbitControls = require('three-orbitcontrols')
 
 var scene, camera, renderer, controls, geometry, edges, light1, light2, texture, line, model;
 
-texture = new THREE.TextureLoader().load('https://i.postimg.cc/0jChBHLK/test-image2.jpg', function(){
+var imageUrl = 'https://i.postimg.cc/y8Ld37Yt/PANO-20191204-153126.jpg';
+
+texture = new THREE.TextureLoader().load(imageUrl, function(){
 
     init();
     animate();
